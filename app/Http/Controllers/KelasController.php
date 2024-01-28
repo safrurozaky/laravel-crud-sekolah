@@ -123,7 +123,7 @@ class KelasController extends Controller
                 'error' => true,
                 'message' => 'Data Tidak Ditemukan'
             ]);
-        }
+        } //ambil dari edit
         $del = $data->delete();
         if ($del) {
             return redirect()->route('kelas.list')->with([
@@ -134,6 +134,6 @@ class KelasController extends Controller
         return redirect()->route('kelas.list')->with([
             'error' => true,
             'message' => 'Hapus kelas Gagal'
-        ]);
+        ]); //ambil dari update
     }    
 }
